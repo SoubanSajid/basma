@@ -1,0 +1,1168 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+}
+:root{
+  --bg-color: #171443B2;
+  --bg2-color:#28255F;
+  --textsn-color:#A793B7;
+  --tbg-color:#A793B7A8;
+  --ib-color:#393C7D;
+  --cbg-color:#A793B74F;
+  --gc-color:#28255FC9;
+  --acbg-color:#A793B7AD;
+  --inbg-color:#FFFFFFBA;
+  --conbg-color:#FFFFFF52;
+  --fs-bg:#D9D9D9;
+  --text-color:#fff;
+  --hover-color:#7d6b9d;
+  --form-input-text:#29265F;
+
+}
+
+/* Top Header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, var(--bg2-color) 30%, var(--textsn-color) 30%);
+  color: white;
+  padding: 10px 80px;
+  flex-wrap: wrap;
+}
+
+.social-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-section span {
+  font-weight: bold;
+}
+
+.icons a {
+  color: var(--bg2-color);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.contact-section {
+  font-size: smaller;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* ---------------- RESPONSIVE STYLES ---------------- */
+
+/* For large screens down to tablets */
+@media (max-width: 1409px) {
+  .top-header {
+    padding: 10px 40px;
+  }
+  .contact-section {
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* For tablets and small laptops */
+@media (max-width: 992px) {
+  .top-header {
+    background: linear-gradient(to right, var(--bg2-color) 50%, var(--textsn-color) 50%);
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+  .contact-section {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .contact-section div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .contact-section > *:nth-child(2n) {
+    display: none; /* hides the "|" separator */
+  }
+}
+
+/* For mobiles */
+@media (max-width: 576px) {
+  .social-section {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .icons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-section {
+    font-size: 0.8rem;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 360px) {
+  .top-header {
+    padding: 8px 12px;
+  }
+  .contact-section {
+    font-size: 0.75rem;
+  }
+  .icons a {
+    padding: 3px;
+    font-size: 12px;
+  }
+}
+
+
+
+/* ---------------- BASE NAVBAR ---------------- */
+.navbar- {
+  background-color: white;
+  padding: 14px 42px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+/* Hide navbar with a slide-up animation */
+.navbar-.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+/* Sticky class */
+.navbar-.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--bg2-color);
+  display: none; /* hidden on desktop */
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--bg2-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+  color: var(--textsn-color);
+}
+
+.nav-links a:hover {
+  color: var(--hover-color);
+}
+
+/* ---------------- ACTIONS ---------------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hire-btn {
+  background-color: var(--textsn-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  border-radius: 25px 0px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hire-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.lang-toggle {
+  border: 2px solid var(--textsn-color);
+  display: flex;
+  background-color: var(--textsn-color);
+  border-radius: 25px 1px;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.lang-toggle #btn-eng {
+  background-color: var(--text-color);
+  color: var(--hover-color);
+  border-radius: 10px 0px;
+}
+
+.custom-box {
+  background: linear-gradient(#A793B7A8, #A793B7A8),
+              url('../img/6.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 85px 22px 0px 22px;
+}
+.custom-box h2 {
+  font-size: 41px;
+  margin: 0;
+}
+.custom-box p {
+  font-size: 23px;
+  margin: 0;
+}
+
+/* ---------------- RESPONSIVE NAVBAR ---------------- */
+
+/* Large screens down to 1409px */
+@media (max-width: 1409px) {
+  .nav-links {
+    gap: 15px;
+  }
+  .hire-btn {
+    padding: 8px 20px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_box{
+    width: 204px;
+    height: 221px;
+    margin-right: 39px;
+  }
+    .cs_experience.cs_style_1 .cs_experience_box-{
+    width: 217px;
+    height: 179px;
+  }
+  .custom-box{
+    padding: 54px 22px 0px 22px;;
+  }
+}
+
+/* Tablets & Small Laptops */
+@media (max-width: 992px) {
+  .logo img{
+    height: 60px;
+  }
+  .navbar-container {
+    flex-wrap: nowrap;
+  }
+
+  /* Show menu button */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide nav links initially */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 120px; /* shows under navbar */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  /* Show when toggled */
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+
+  /* Actions under nav links */
+  .actions {
+    order: 3;
+    width: 100%;
+    justify-content: right;
+    flex-direction: row; /* side by side */
+    margin-top: 12px;
+    gap: 12px;
+  }
+
+  .hire-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 20px 0;
+  }
+
+  .lang-toggle button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_box-{
+    width: 266px;
+    height: 210px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: row;     /* stack vertically */
+    align-items: stretch;       /* full width buttons */
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hire-btn {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .lang-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lang-toggle button {
+    font-size: 13px;
+    padding: 7px 54px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_thumb, .cs_experience_thumb-{
+    padding: 25px 0px 115px 15px;
+  }
+  .cs_experience_thumb-ca{
+    padding: 40px 0 115px 0px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_shape{
+    right: 111px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_box{
+    width: 212px;
+    height: 238px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_box-{
+    width: 206px;
+    height: 162px;
+    margin-bottom: 34px;
+    margin-left: 6px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_box-s{
+    width: 174px;
+    height: 185px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_shape-c{
+    top: 180px;
+    left: 118px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_shape-{
+    top: 224px;
+  }
+  .cs_height_lg_80{
+    height: 70px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 390px) {
+  .nav-links{
+    top: 108px;
+  }
+  .logo img {
+    height: 40px;
+  }
+
+  .hire-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .custom-box {
+    padding: 5px 22px 0px 22px;
+  }
+  .lang-toggle button {
+    font-size: 12px;
+    padding: 6px 30px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_box{
+    height: 215px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_box-{
+    width: 185px;
+    height: 140px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #f5f5f5, #eae6f3);
+
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background image */
+.hero-bg {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes it behave like a background image */
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color); 
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 1;
+  color: #7d6b9d;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Above the image and overlay */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero .hero-content h1 {
+    font-size: 77px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero .hero-content h1 span{
+  color: #7d6b9d;
+}
+
+.subheading {
+  font-size: 22px;
+  margin-bottom: 40px;
+  color: #f0f0f0;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 8rem;
+}
+
+.btn- {
+  display: inline-block;
+  background-color: var(--textsn-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-radius: 14px 0px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-:hover {
+  background-color: var(--text-color);
+  color: var(--bg2-color);
+}
+
+.btn-outline- {
+  border: 2px solid #fff;
+  background-color: var(--text-color);
+  color: var(--bg2-color);
+}
+
+.btn-outline-:hover {
+  background-color: var(--textsn-color);
+  color: var(--text-color);
+}
+
+.call-now .icon{
+  font-size: 1.5rem;
+  background: var(--ib-color);
+  color: var(--text-color);
+  padding: 3px 11px;
+  border-radius: 24px 0px;
+}
+
+.call-now p{
+  color: var(--textsn-color);
+}
+
+.call-now a{
+  color: var(--ib-color);
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 991px) {
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .btn- {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero {
+    padding: 50px 10px;
+  }
+
+  .hero .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .subheading {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 5rem;
+  }
+
+  .btn- {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+/* ---------- CARD SECTION (desktop grid + mobile slider) ---------- */
+.card-section{
+  padding: 20px;
+  margin-top: -131.2px;         /* keep overlap if you want it, reduce from -133px if needed */
+  position: relative;
+  z-index: 5;                /* ensure cards appear above hero overlays (but below navbar if needed) */
+  overflow: visible;
+}
+
+/* Desktop: grid-like flex wrap */
+.card-slider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.card-h {
+  flex: 1 1 320px;   /* grow/shrink, base width 320px */
+  min-width: 280px;
+  max-width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-h svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.28s ease;
+}
+
+.card-h svg:hover {
+  transform: translateY(-8px);
+}
+
+/* ---------------- Responsive: switch to slider on narrow screens ---------------- */
+@media (max-width: 1402px){
+  .card-section{
+    margin-top: -129px;
+  }
+  .card-slider{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;              /* single-row, scrollable */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-left: 20px;             /* ensures first card fully visible */
+    scroll-padding-left: 20px;
+  }
+
+  .card-h {
+    flex: 0 0 82%;                  /* show one card mostly in viewport */
+    /* max-width: 82%; */
+    min-width: 280px;
+    scroll-snap-align: start;
+  }
+
+  /* hide scrollbar on webkit */
+  .card-slider::-webkit-scrollbar {
+    display: none;
+    height: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .card-section {
+    margin-top: -112px;   /* reduce overlap on small screens so first card is visible */
+  }
+
+  .card-slider{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;              /* single-row, scrollable */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-left: 20px;             /* ensures first card fully visible */
+    scroll-padding-left: 20px;
+  }
+
+  .card-h {
+    flex: 0 0 82%;                  /* show one card mostly in viewport */
+    /* max-width: 82%; */
+    min-width: 280px;
+    scroll-snap-align: start;
+  }
+
+  /* hide scrollbar on webkit */
+  .card-slider::-webkit-scrollbar {
+    display: none;
+    height: 8px;
+  }
+}
+  .goals-section {
+          padding: 60px 20px;
+          text-align: center;
+          position: relative;
+          overflow: hidden; /* keeps bg inside */
+          background-color: #fff;
+  }
+
+  .goals-section .dots-bg {
+          position: absolute;
+          top: 56px;
+          left: 0;
+          width: 300px;   /* adjust size */
+          height: 50%;
+          background: url('../img/Isolation_Mode.png') no-repeat left center;
+          background-size: contain;
+          z-index: 0; /* behind content */
+  }
+
+  .goals-section h2,
+  .goals-section h1,
+  .goals-section p,
+  .goals-grid {
+          position: relative;
+          z-index: 1; /* keep text/cards above */
+  }
+  .section-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: var(--bg2-color);
+      font-weight: 700;
+    }
+
+  .goals-section h1{
+      color: var(--bg2-color);
+  }
+  .goals-section p{
+      color: var(--bg2-color);
+  }
+
+  .goals-grid {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+  }
+
+  .goal-card {
+      /* z-index: 1; */
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+      /* background: var(--bg-color); */
+      border-radius: 35px 0px;
+      padding: 32px;
+      padding-top: 93px; /* space for image */
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+  }
+
+    .goal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .goal-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 35px 0 0 0;
+      z-index: -1;
+    }
+
+    .goal-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    .goal-image::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-color)
+    }
+
+    .goal-card h3 {
+      font-size: 1.8rem;
+      color: var(--text-color);
+      margin-bottom: 15px;
+    }
+
+    .goal-card p {
+      font-size: 0.95rem;
+      color: var(--text-color);
+      margin-bottom: 20px;
+    }
+
+    .goal-card .extra-text {
+      display: none;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      margin-top: -19px;
+    }
+    .goal-card.show-more .extra-text{
+      display: inline;
+    }
+    /* .goal-card .goal-text {
+      font-size: 0.95rem;
+      color: var(--text-color);
+      line-height: 1.4;
+      max-height: 60px;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .goal-card.expanded .goal-text {
+      max-height: 400px;
+    } */
+
+    /* Upward arrow button */
+    .close-btn {
+      border-radius: 15px 0px;
+      display: none;
+      background: none;
+      color: var(--text-color);
+      background-color: var(--acbg-color);
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      float: right;
+      cursor: pointer;
+      padding: 0px 17px 0px 17px;
+      transform: rotate(360deg); /* makes ↓ into ↑ */
+    }
+        .goal-btn- {
+      display: inline-block;
+      background-color: var(--textsn-color);
+      color: var(--text-color);
+      padding: 10px 20px;
+      border-radius: 25px 0px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .goal-btn-:hover {
+      background-color: var(--text-color);
+      color: var(--bg2-color);
+    }
+
+
+/* .btn-read {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+} */
+
+/* .btn-read:hover {
+  background: #5b4a75;
+} */
+
+.activity-section {
+  position: relative;
+  padding: 80px 20px;
+  color: var(--text-color);
+  text-align: center;
+  overflow: hidden;
+
+}
+
+.activity-section .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/7.png') center/cover no-repeat;
+  z-index: 1;
+}
+
+.activity-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gc-color); /* Adjust color and transparency */
+  z-index: 2;
+}
+
+.activity-section .content {
+  position: relative;
+  z-index: 3;
+}
+
+.activity-section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.activity-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.activity-section p {
+  margin: 0 auto 60px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 75rem;
+}
+
+.activity-row {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.activity-card {
+  background: var(--acbg-color);
+  border-radius: 30px 0px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 362px;
+  padding: 30px 20px;
+  backdrop-filter: blur(1.25px);
+  -webkit-backdrop-filter: blur(1.25px);
+  color: var(--text-color);
+  text-align: left;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.activity-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.activity-card h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  color: var(--bg2-color);
+}
+
+.activity-card p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+
+
+.cs_footer {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.9)),
+    url('../img/footer-bg.png');
+  background-size: cover;      /* cover = fill whole area */
+  background-position:center; /* center image */
+  background-repeat: no-repeat;/* no repeating */
+  color: var(--bg2-color);
+  position: relative;
+  z-index: 0;
+}
+
+
+/* remove the old forced white overlay */
+.cs_footer .container::before {
+  content: none;
+}
+
+
+    .cs_footer p{
+      color: #28255F;
+    }
+    .cs_copyright p{
+      color: var(--text-color);
+    }
+    .cs_footer a{
+      color: #28255F;
+      text-decoration: none;
+      margin-bottom: 1px;
+    }
+    .cs_footer a:hover{
+      text-decoration: underline;
+    }
+    .btn-f{
+      padding: 4px;
+      border-radius: 13px 0px;
+    }
+    .footer {
+      background-color: #f9f9f9;
+      padding: 50px 0;
+      color: #333;
+    }
+
+    .footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .footer-logo {
+      max-width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .footer-left p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .footer-social a{
+      margin-right: 10px;
+      color: var(--bg-color);
+      font-size: 22px;
+    }
+
+    .list-unstyled i {
+      margin-right: 6px;
+      color: var(--textsn-color);
+      font-size: 10px;
+    }
+
+    .cs_footer h5 {
+      color: var(--bg2-color);
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .list-unstyled a:hover{
+      color: var(--hover-color);
+    }
+
+    .cs_footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cs_footer ul li {
+      margin-bottom: 8px;
+    }
+
+    .cs_footer ul li a {
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--bg2-color);
+      font-size: 14px;
+    }
+    footer a.active {
+      color: var(--textsn-color); /* Same as navbar active or a different color */
+      font-weight: bold;
+    }
+
+
+    .footer-newsletter p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .footer-newsletter form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-newsletter input {
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .footer-newsletter button {
+      background-color: var(--textsn-color);
+      color: var(--text-color);
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer-newsletter button:hover {
+      background-color: #69558a;
+    }
+
+    @media (max-width: 768px) {
+      .footer .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+
+    @media (max-width: 450px){
+      .cs_experience_thumb-c::before{
+        width: 229px;
+        height: 277px;
+      }
+      .cs_experience_thumb-c::after{
+        width: 229px;
+        height: 277px;
+      }
+
+    }
+
+    @media (max-width: 450px){
+      .cs_experience_thumb-c::before{
+        height: 250px;
+      }
+      .cs_experience_thumb-c::after{
+        height: 250px;
+      }
+    }
