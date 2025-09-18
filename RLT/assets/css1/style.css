@@ -314,6 +314,7 @@ body {
 
   /* Show when toggled */
   .nav-links.show {
+    top: 87px;
     display: flex;
   }
 
@@ -357,6 +358,9 @@ body {
 
   .nav-links {
     width: 100%;
+  }
+  .nav-links.show {
+    top: 127px;
   }
 
   .actions {
@@ -424,6 +428,9 @@ body {
 @media (max-width: 390px) {
   .nav-links{
     top: 108px;
+  }
+    .nav-links.show {
+    top: 115px;
   }
   .logo img {
     height: 40px;
