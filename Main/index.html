@@ -32,67 +32,118 @@
 
 
       <div class="cs_preloader cs_accent_color cs_white_bg">
-      <div class="cs_preloader bg-white d-flex justify-content-center align-items-center">
+        <div class="cs_preloader bg-white d-flex justify-content-center align-items-center">
         <div class="cs_preloader_in">
           <img src="assets/img/favicon.png" alt="Logo">
         </div>
       </div>
       </div>
 
-      <div class="top-header">
-      <div class="social-section">
-        <span>Follow Us:</span>
-        <div class="icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fas fa-x"></i></a>
-        </div>
-      </div>
-      <div class="contact-section">
-        <div><i class="fas fa-map-marker-alt"></i> Creativity Tower, Fujairah, UAE</div>
-        |
-        <div><i class="fas fa-envelope"></i> Basma.est@gmail.com</div>
-        |
-        <div><i class="fas fa-phone"></i> +971 505 789 888</div>
-      </div>
-      </div>
+<!-- Top Header -->
+<div class="top-header">
+  <div class="social-section">
+    <span>Follow Us:</span>
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fas fa-x"></i></a>
+    </div>
+  </div>
+  <div class="contact-section">
+    <div><i class="fas fa-map-marker-alt"></i> Creativity Tower, Fujairah, UAE</div> |
+    <div><i class="fas fa-envelope"></i> Basma.est@gmail.com</div> |
+    <div><i class="fas fa-phone"></i> +971 505 789 888</div>
+  </div>
+</div>
 
-  <!-- Navbar start-->
-      <header class="navbar-">
-        <div class="navbar-container">
-          <!-- Left: Logo & Menu -->
-          <div class="left-section">
-            <button class="menu-icon" onclick="toggleNav()">☰</button>
-            <div class="logo">
-              <img src="assets/img/logo.svg" alt="Basma Logo" />
-              <span>
-              </span>
-            </div>
-          </div>
+<!-- Navbar -->
+<header class="navbar-">
+  <div class="navbar-container">
+    <!-- Left: Logo -->
+    <div class="logo">
+      <img src="assets/img/logo.svg" alt="Basma Logo" />
+    </div>
 
-          <!-- Center: Navigation Links -->
-          <nav class="nav-links" id="navMenu">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#vision">Our Vision</a>
-            <a href="#message">Our Message</a>
-            <a href="#Goals">Our Goals</a>
-            <a href="#activites">Our Activities</a>
-            <a href="#contact">Contact</a>
-          </nav>
+    <!-- Right: Menu Icon -->
+    <button class="menu-icon" onclick="toggleNav()">☰</button>
 
-          <!-- Right: Buttons -->
-          <div class="actions">
-            <button class="hire-btn">Hire Us</button>
-            <div class="lang-toggle">
-              <button id="btn-ar" class="active">Ar</button>
-              <button id="btn-eng">Eng</button>
-            </div>
-          </div>
-        </div>
-      </header>
-  <!-- Navbar start-->
+    <!-- Desktop Nav Links -->
+    <nav class="nav-links desktop-nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#vision">Our Vision</a>
+      <a href="#message">Our Message</a>
+      <a href="#Goals">Our Goals</a>
+      <a href="#activites">Our Activities</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Desktop Actions -->
+    <div class="actions desktop-actions">
+      <button class="hire-btn">Hire Us</button>
+      <div class="lang-toggle">
+        <button id="btn-ar" class="active">Ar</button>
+        <button id="btn-eng">Eng</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+  <div class="side-menu-content"> <!-- ✅ Added this wrapper -->
+    <div style="display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;">
+      <button class="close-btn-m" onclick="toggleNav()">×</button>
+      <h3 class="menu-title">Menu</h3>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#vision">Our Vision</a>
+      <a href="#message">Our Message</a>
+      <a href="#Goals">Our Goals</a>
+      <a href="#activites">Our Activities</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="menu-buttons">
+      <button class="hire-btn">Hire Us</button>
+      <div class="lang-toggle">
+        <button id="btn-ar" class="active">Ar</button>
+        <button id="btn-eng">Eng</button>
+      </div>
+    </div>
+    
+        <div class="social-section">
+      <span>Follow Us:</span>
+      <div class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-x"></i></a>
+      </div>
+    </div>
+
+    <div class="menu-contact">
+      <p><i class="fas fa-map-marker-alt"></i> Creativity Tower, Fujairah, UAE</p>
+      <hr>
+      <p><i class="fas fa-envelope"></i> Basma.est@gmail.com</p>
+      <hr>
+      <p><i class="fas fa-phone"></i> +971 505 789 888</p>
+    </div>
+    <hr>
+
+
+  </div> <!-- ✅ Closing .side-menu-content -->
+</div>
+
 
 
   <!-- Hero Section start-->
@@ -343,7 +394,7 @@
               </p>
             </div>
           </div>
-          <hr style="width: 30rem;">
+          <hr style="width: 29rem;">
           <div class="d-flex align-items-center cs_row_gap_20 cs_column_gap_30 cs_column_gap_lg_20 flex-wrap" style="margin-top: 2rem;">
             <!-- Contact Button -->
             <a href="#contact" 

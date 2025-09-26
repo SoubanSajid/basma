@@ -1,16 +1,15 @@
 function toggleNav() {
-  const navMenu = document.getElementById('navMenu');
-  const menuIcon = document.querySelector('.menu-icon');
-
-  navMenu.classList.toggle('show'); // toggle open/close
-
-  // Toggle icon
-  if (navMenu.classList.contains('show')) {
-    menuIcon.textContent = '✖'; // Close icon
-  } else {
-    menuIcon.textContent = '☰'; // Hamburger icon
-  }
+  const sideMenu = document.getElementById('sideMenu');
+  sideMenu.classList.toggle('open');
 }
+// ✅ Close side menu when any link inside it is clicked
+document.querySelectorAll('#sideMenu .nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const sideMenu = document.getElementById('sideMenu');
+    sideMenu.classList.remove('open'); // close menu
+  });
+});
+
 
   document.getElementById("btn-ar").addEventListener("click", function () {
     window.location.href = "/RLT/index.html"; // Arabic page

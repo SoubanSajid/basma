@@ -73,6 +73,7 @@ body {
 /* For tablets and small laptops */
 @media (max-width: 992px) {
   .top-header {
+    display: none;
     background: linear-gradient(to right, var(--bg2-color) 50%, var(--textsn-color) 50%);
     flex-direction: column;
     text-align: center;
@@ -256,11 +257,101 @@ body {
   font-size: 23px;
   margin: 0;
 }
+/* ---------------- SIDE MENU STYLING ---------------- */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.close-btn-m {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.side-menu .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.side-menu .nav-links a {
+  text-decoration: none;
+  color: var(--bg2-color);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.side-menu-content {
+  scroll-behavior: smooth;
+}
+
+
+.side-menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 20px 20px;
+
+  /* ✅ Enable Scroll Inside Menu */
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ccc transparent;
+}
+
+/* ✅ Custom Scrollbar for Webkit Browsers */
+.side-menu-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-menu-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.side-menu-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 992px) {
+  .desktop-nav,
+  .desktop-actions {
+    display: none;
+  }
+}
+
 
 /* ---------------- RESPONSIVE NAVBAR ---------------- */
 
 /* Large screens down to 1409px */
 @media (max-width: 1409px) {
+  .side-menu{
+    display: none;
+  }
   .nav-links {
     gap: 15px;
   }
@@ -283,29 +374,39 @@ body {
 
 /* Tablets & Small Laptops */
 @media (max-width: 992px) {
+    .side-menu{
+    display: flex;
+  }
+    .navbar-container {
+    display: flex;
+    justify-content: space-between; /* pushes logo left & menu right */
+    align-items: center;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--bg2-color);
+  }
+  .social-section{
+    margin: 36px;
+    flex-direction: column;
+  }
+
   .logo img{
     height: 60px;
   }
   .navbar-container {
     flex-wrap: nowrap;
   }
-
-  /* Show menu button */
-  .menu-icon {
-    display: block;
-  }
-
   /* Hide nav links initially */
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: var(--text-color);
-    position: absolute;
-    top: 120px; /* shows under navbar */
-    left: 0;
-    right: 0;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
 
@@ -318,7 +419,9 @@ body {
     padding: 10px 0;
     font-size: 16px;
   }
-
+  .cs_height_lg_80{
+    height: 70px;
+  }
 
   /* Actions under nav links */
   .actions {
@@ -338,7 +441,10 @@ body {
 
   .lang-toggle button {
     font-size: 14px;
-    padding: 8px 14px;
+    padding: 8px 45px;
+  }
+  .cs_experience.cs_style_1 .cs_experience_shape{
+    right: 150px;
   }
   .cs_experience.cs_style_1 .cs_experience_box-{
     width: 266px;
@@ -349,7 +455,7 @@ body {
 /* Mobile screens */
 @media (max-width: 576px) {
   .navbar-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
@@ -411,9 +517,7 @@ body {
   .cs_experience.cs_style_1 .cs_experience_shape-{
     top: 224px;
   }
-  .cs_height_lg_80{
-    height: 70px;
-  }
+
 }
 
 /* Very small phones */
@@ -434,7 +538,7 @@ body {
   }
   .lang-toggle button {
     font-size: 12px;
-    padding: 6px 30px;
+    padding: 6px 58px;
   }
   .cs_experience.cs_style_1 .cs_experience_box{
     height: 215px;
@@ -618,6 +722,9 @@ body {
     margin: 0 auto;
     font-size: 14px;
     padding: 10px 18px;
+  }
+  .read-more{
+    max-width: 131px;
   }
 }
 
@@ -877,23 +984,6 @@ body {
       color: var(--bg2-color);
     }
 
-
-/* .btn-read {
-  margin-top: auto;
-  align-self: flex-start;
-  display: inline-block;
-  padding: 8px 16px;
-  background: var(--accent-color);
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
-} */
-
-/* .btn-read:hover {
-  background: #5b4a75;
-} */
 
 .activity-section {
   position: relative;
