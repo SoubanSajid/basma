@@ -39,60 +39,108 @@
       </div>
       </div>
 
-      <div class="top-header">
-      <div class="social-section">
-        <div class="icons">
-          <a href="#"><i class="fas fa-x"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-         <span>: Follow Us</span>
-      </div>
-      <div class="contact-section">
-        <div dir="ltr"><i class="fas fa-map-marker-alt"></i> Creativity Tower, Fujairah, UAE</div>
-        |
-        <div dir="ltr"><i class="fas fa-envelope"></i> Basma.est@gmail.com</div>
-        |
-        <div dir="ltr"><i class="fas fa-phone"></i> +971 505 789 888</div>
-      </div>
-      </div>
+<!-- Top Header -->
+<div class="top-header" dir="ltr">
+  <div class="social-section" dir="ltr">
+    <span>Follow Us:</span>
+    <div class="icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fas fa-x"></i></a>
+    </div>
+  </div>
+  <div class="contact-section" dir="ltr">
+    <div><i class="fas fa-map-marker-alt"></i> Creativity Tower, Fujairah, UAE</div> |
+    <div><i class="fas fa-envelope"></i> Basma.est@gmail.com</div> |
+    <div><i class="fas fa-phone"></i> +971 505 789 888</div>
+  </div>
+</div>
 
-  <!-- Navbar start-->
-      <header class="navbar-">
-        <div class="navbar-container">
-          <!-- Left: Logo & Menu -->
-          <div class="left-section">
-            <button class="menu-icon" onclick="toggleNav()">☰</button>
-            <div class="logo">
-              <img src="assets/img/logo.svg" alt="Basma Logo" />
-              <span>
-              </span>
-            </div>
-          </div>
+<!-- Navbar -->
+<header class="navbar-">
+  <div class="navbar-container">
+    <!-- Left: Logo -->
+    <div class="logo">
+      <img src="assets/img/logo.svg" alt="Basma Logo" />
+    </div>
 
-          <!-- Center: Navigation Links -->
-          <nav class="nav-links" id="navMenu">
-            <a href="#home" class="active"> الرئيسية </a>
-            <a href="#about"> من نحن </a>
-            <a href="#vision"> رؤيتنا </a>
-            <a href="#message"> رسالتنا </a>
-            <a href="#Goals"> أهدافنا </a>
-            <a href="#activites"> خدماتنا </a>
-            <a href="#contact"> تواصل معنا </a>
-          </nav>
+    <!-- Right: Menu Icon -->
+    <button class="menu-icon" onclick="toggleNav()">☰</button>
 
-          <!-- Right: Buttons -->
-          <div class="actions">
-            <button class="hire-btn"> استعن بنا </button>
-            <div class="lang-toggle">
-              <button id="btn-ar" class="active">Eng</button>
-              <button id="btn-eng"> Ar</button>
-            </div>
-          </div>
-        </div>
-      </header>
-  <!-- Navbar start-->
+    <!-- Desktop Nav Links -->
+    <nav class="nav-links desktop-nav">
+      <a href="#home" class="active"> الرئيسية </a>
+      <a href="#about"> من نحن </a>
+      <a href="#vision"> رؤيتنا </a>
+      <a href="#message"> ما نقدمه </a>
+      <a href="#Goals"> أهدافنا </a>
+      <a href="#activites"> خدماتنا </a>
+      <a href="#mission"> رسالتنا </a>
+      <a href="#contact"> تواصل معنا </a>
+    </nav>
+
+    <!-- Desktop Actions -->
+    <div class="actions desktop-actions">
+      <button class="hire-btn"> استعن بنا </button>
+      <div class="lang-toggle">
+        <button id="btn-ar" class="active">Ar</button>
+        <button id="btn-eng">Eng</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+  <div class="side-menu-content"> <!-- ✅ Added this wrapper -->
+    <div style="display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;">
+      <button class="close-btn-m" onclick="toggleNav()">×</button>
+      <h3 class="menu-title"> قائمة </h3>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#home" class="active"> الرئيسية </a>
+      <a href="#about"> من نحن </a>
+      <a href="#vision"> رؤيتنا </a>
+      <a href="#message"> ما نقدمه </a>
+      <a href="#Goals"> أهدافنا </a>
+      <a href="#activites"> خدماتنا </a>
+      <a href="#mission"> رسالتنا </a>
+      <a href="#contact"> تواصل معنا </a>
+    </nav>
+
+    <div class="menu-buttons">
+      <button class="hire-btn"> استعن بنا </button>
+      <div class="lang-toggle">
+        <button id="btn-ar" class="active">Ar</button>
+        <button id="btn-eng">Eng</button>
+      </div>
+    </div>
+    
+        <div class="social-section" dir="ltr">
+      <span>Follow Us:</span>
+      <div class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-x"></i></a>
+      </div>
+    </div>
+    <hr>
+    <div class="menu-contact" dir="ltr">
+      <p><i class="fas fa-map-marker-alt"></i> Creativity Tower, Fujairah, UAE</p>
+      <hr>
+      <p><i class="fas fa-envelope"></i> Basma.est@gmail.com</p>
+      <hr>
+      <p><i class="fas fa-phone"></i> +971 505 789 888</p>
+    </div>
+  </div> <!-- ✅ Closing .side-menu-content -->
+</div>
+  <!-- Navbar End-->
 
 
   <!-- Hero Section start-->
@@ -100,15 +148,16 @@
       <img src="assets/img/2.jpg" alt="Hero Background" class="hero-bg" />
 
       <div class="hero-content">
-        <h2 >Welcome to Basma institute</h2>
+        <h2> مرحبا بكم في معهد بسمة </h2>
         <h1> معهد بصمة للتدريب في مجال <span> التطوير </span> المهني الإداري </h1>
         <p class="subheading">
-          Basma Institute delivers high-quality training solutions in professional and career development, offering specialized programs across Management, Human Resources, Arts, Technology, and Languages.
+          يقدم بصمة حلولاً تدريبية وخدمات ذات جودة عالية في مجال التطوير المهني والوظيفي، ويطرح دورات متخصصة في مختلف مجالات الإدارة والموارد البشرية والفنون والتقنيات واللغات.
+
         </p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn- btn-outline-" >→ Contact Us</a>
-          <a href="#about" class="btn-">→ About Us</a>
+          <a href="#contact" class="btn- btn-outline-" > تواصل معنا ←</a>
+          <a href="#about" class="btn-"> من نحن ←</a>
         </div>
       </div>
     </section>
@@ -285,8 +334,8 @@
                 <!-- Image Box with Overlay + Text -->
                 <div class="cs_experience_box custom-box text-center cs_rounded_10 position-absolute bottom-0 start-0 cs_zindex_3 d-flex flex-column justify-content-center align-items-center">
                   <h2 class="fw-bold mb-2">30+</h2>
-                  <p class="mb-0">Years of</p>
-                  <p class="mb-0">Quality Service</p>
+                  <p class="mb-0"> سنوات من </p>
+                  <p class="mb-0"> خدمة الجودة </p>
                 </div>
               </div>
             </div>
@@ -342,7 +391,7 @@
             <!-- Contact Button -->
             <a href="#contact" 
               class="cs_btn cs_style_1 cs_fs_14 cs_rounded_5 cs_pl_30 cs_pr_30 cs_pt_10 cs_pb_10 overflow-hidden btn-">
-              <span>Contact US</span>
+              <span> تواصل معنا </span>
             </a>
 
             <!-- Call Section (Icon on top, number below) -->
@@ -361,7 +410,7 @@
                           </svg>
               </span>
               <div >
-                <p class="m-0">Cell Now:</p>
+                <p class="m-0">: الخلية الآن</p>
               <a href="tel:+971505789888">
                 +971 505 789 888
               </a>
