@@ -23,6 +23,7 @@ document.querySelectorAll('#sideMenu .nav-links a').forEach(link => {
 //   });
 // });
 
+
 // ✅ Remove broken code for #navMenu (it doesn't exist in your HTML)
 
 // Card slider (RTL friendly)
