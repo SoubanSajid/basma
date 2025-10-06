@@ -11,17 +11,17 @@ document.querySelectorAll('#sideMenu .nav-links a').forEach(link => {
 });
 
 // ✅ Handle AR / ENG buttons (both desktop & mobile)
-document.querySelectorAll("#btn-ar").forEach(btn => {
-  btn.addEventListener("click", function () {
-    window.location.href = "/RLT/index.html"; // Arabic page
-  });
-});
+// document.querySelectorAll("#btn-ar").forEach(btn => {
+//   btn.addEventListener("click", function () {
+//     window.location.href = "/RLT/index.html"; // Arabic page
+//   });
+// });
 
-document.querySelectorAll("#btn-eng").forEach(btn => {
-  btn.addEventListener("click", function () {
-    window.location.href = "/Main/index.html"; // English page
-  });
-});
+// document.querySelectorAll("#btn-eng").forEach(btn => {
+//   btn.addEventListener("click", function () {
+//     window.location.href = "/Main/index.html"; // English page
+//   });
+// });
 
 // ✅ Remove broken code for #navMenu (it doesn't exist in your HTML)
 

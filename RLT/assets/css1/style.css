@@ -238,7 +238,7 @@ body {
   overflow: hidden;
 }
 
-.lang-toggle button {
+.lang-toggle a {
   border: none;
   padding: 8px 20px;
   font-weight: 600;
@@ -324,7 +324,7 @@ body {
 .side-menu-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 100%;
   padding: 0 20px 20px;
 
@@ -359,7 +359,7 @@ body {
     color: var(--bg2-color);
   }
   .icons a{
-  background-color: var(--bg2-color);
+  background-color: var(--textsn-color);
   color: white;
   }
   .menu-contact p{
@@ -384,7 +384,7 @@ body {
   .cs_experience.cs_style_1 .cs_experience_box{
     width: 204px;
     height: 221px;
-    margin-right: 39px;
+    margin-left: 39px;
   }
     .cs_experience.cs_style_1 .cs_experience_box-{
     width: 217px;
@@ -467,12 +467,12 @@ body {
     border-radius: 20px 0;
   }
 
-  .lang-toggle button {
+  .lang-toggle a {
     font-size: 14px;
     padding: 8px 45px;
   }
   .cs_experience.cs_style_1 .cs_experience_shape{
-    right: 150px;
+    left: 150px;
   }
   .cs_experience.cs_style_1 .cs_experience_box-{
     width: 266px;
@@ -511,7 +511,7 @@ body {
     justify-content: center;
   }
 
-  .lang-toggle button {
+  .lang-toggle a {
     font-size: 13px;
     padding: 7px 54px;
   }
@@ -567,7 +567,7 @@ body {
   .custom-box {
     padding: 5px 22px 0px 22px;
   }
-  .lang-toggle button {
+  .lang-toggle a {
     font-size: 12px;
     padding: 6px 58px;
   }
