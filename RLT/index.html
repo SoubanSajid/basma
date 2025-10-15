@@ -26,6 +26,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <!-- fontanswer icon link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  a{
+    text-decoration: none;
+    color: initial;
+  }
+</style>
 </head>
 <body style="background-color: #FAFAFA; ">
 
@@ -47,7 +53,7 @@
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fas fa-x"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
     </div>
   </div>
   <div class="contact-section" dir="ltr">
@@ -70,22 +76,22 @@
 
     <!-- Desktop Nav Links -->
     <nav class="nav-links desktop-nav">
-      <a href="#home" class="active"> الرئيسية </a>
-      <a href="#about"> من نحن </a>
-      <a href="#vision"> رؤيتنا </a>
-      <a href="#message"> ما نقدمه </a>
-      <a href="#Goals"> أهدافنا </a>
-      <a href="#activites"> خدماتنا </a>
-      <a href="#mission"> رسالتنا </a>
-      <a href="#contact"> تواصل معنا </a>
+      <li class="anim"><a href="#home" class="active"> الرئيسية </a></li>
+      <li class="anim"><a href="#about"> من نحن </a></li>
+      <li class="anim"><a href="#vision"> رؤيتنا </a></li>
+      <li class="anim"><a href="#message"> ما نقدمه </a></li>
+      <li class="anim"><a href="#Goals"> أهدافنا </a></li>
+      <li class="anim"><a href="#activites"> خدماتنا </a></li>
+      <li class="anim"><a href="#mission"> رسالتنا </a></li>
+      <li class="anim"><a href="#contact"> تواصل معنا </a></li>
     </nav>
 
     <!-- Desktop Actions -->
     <div class="actions desktop-actions">
-      <button class="hire-btn"> استعن بنا </button>
+      <button class="hire-btn btn-m"> استعن بنا </button>
       <div class="lang-toggle">
-        <a href="/RLT/index.html" id="btn-ar" class="active" style="text-decoration: none;">Ar</a>
-        <a href="/Main/index.html" id="btn-eng" style="text-decoration:none;">Eng</a>
+        <a href="RLT/index.html" id="btn-ar" class="active" style="text-decoration: none;">Ar</a>
+        <a href="Main/index.html" id="btn-eng" style="text-decoration:none;">Eng</a>
       </div>
     </div>
   </div>
@@ -114,10 +120,10 @@
     </nav>
 
     <div class="menu-buttons">
-      <button class="hire-btn"> استعن بنا </button>
+      <button class="hire-btn btn-m"> استعن بنا </button>
       <div class="lang-toggle">
-        <a href="/RLT/index.html" id="btn-ar" class="active" style="text-decoration: none;">Ar</a>
-        <a href="/Main/index.html" id="btn-eng" style="text-decoration:none;">Eng</a>
+        <a href="RLT/index.html" id="btn-ar" class="active" style="text-decoration: none;">Ar</a>
+        <a href="Main/index.html" id="btn-eng" style="text-decoration:none;">Eng</a>
       </div>
     </div>
     
@@ -127,7 +133,7 @@
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fas fa-x"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
       </div>
     </div>
     <hr>
@@ -156,8 +162,9 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#contact" class="btn- btn-outline-" > تواصل معنا ←</a>
+          
           <a href="#about" class="btn-"> من نحن ←</a>
+          <a href="#contact" class="btn- btn-outline-"> تواصل معنا ←</a>
         </div>
       </div>
     </section>
@@ -411,7 +418,7 @@
               </span>
               <div >
                 <p class="m-0">: الخلية الآن</p>
-              <a href="tel:+971505789888">
+              <a class="hover" href="tel:+971505789888">
                 +971 505 789 888
               </a>
               </div>
@@ -650,8 +657,7 @@
                 </div>
                 <div>
                   <p class="text-accent cs_mb_7"> هل لديك أي استفسار؟ </p>
-                  <h2 class="text-white m-0 fw-medium cs_fs_22 cs_fs_lg_18 cs_lh_base" dir="ltr">
-                    +971 505 789 888
+                  <h2 class="m-0 fw-medium cs_fs_20 cs_fs_lg_18 cs_lh_base hover" dir="ltr"><a href="tel:+971-505-789-888" class="contact-value-link">+971-505-789-888</a>
                   </h2>
                 </div>
               </div>
@@ -665,7 +671,7 @@
                   </div>
                 <div>
                   <p class="text-accent cs_mb_7"> أرسل بريدًا إلكترونيًا </p>
-                  <h2 class="text-white m-0 fw-medium cs_fs_22 cs_fs_lg_18 cs_lh_base"> Basma.est@gmail.com </h2>
+                  <h2 class="m-0 fw-medium cs_fs_20 cs_fs_lg_18 cs_lh_base hover"><a href="basma.est@gmail.com" class="contact-value-link">basma.est@gmail.com</a></h2>
                 </div>
               </div>
               <div class="d-flex align-items-center">
@@ -677,7 +683,7 @@
                 </div>
                 <div>
                   <p class="text-accent cs_mb_7"> العنوان </p>
-                  <h2 class="text-white m-0 fw-medium cs_fs_22 cs_fs_lg_18 cs_lh_base"> Creativity Tower, Fujairah, UAE </h2>
+                  <h2 class="text-white m-0 fw-medium cs_fs_20 cs_fs_lg_18 cs_lh_base"> Creativity Tower, Fujairah, UAE </h2>
                 </div>
               </div>
             </div>
@@ -690,7 +696,7 @@
                   <input class="form-control cs_fs_14 cs_rounded_5 border-0 cs_mb_15 bg-gray" type="email" placeholder="Your Email" dir="ltr">
                   <input class="form-control cs_fs_14 cs_rounded_5 border-0 cs_mb_15 bg-gray" type="tel" placeholder="Phone Number" dir="ltr">
                   <textarea class="form-control cs_fs_14 cs_rounded_5 border-0 cs_mb_30 bg-gray" placeholder="Message here ..." cols="30" rows="4" dir="ltr"></textarea>
-                  <button class="cs_btn cs_style_1 cs_fs_14 cs_rounded_5 cs_pl_30 cs_pr_30 cs_pt_10 cs_pb_10 overflow-hidden" style="background-color: #28255F;"><span>Submit Now</span></button>
+                  <button class="cs_btn cs_style_1 cs_fs_14 cs_rounded_5 cs_pl_30 cs_pr_30 cs_pt_10 cs_pb_10 overflow-hidden btn-submit" style="background-color: #28255F;"><span>Submit Now</span></button>
                 </form>
               </div>
             </div>
@@ -714,16 +720,15 @@
                   يقدم «بصمة» حلولاً تدريبية وخدمات ذات جودة عالية في مجال التطوير المهني والوظيفي
                 </p>
                 <div class="footer-social d-flex gap-5 mt-5">
-                  <a class="cs_fs_22" href="https://www.facebook.com/p/Basma-Professional-Management-Development-Training-100093049615468/"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="#"><i class="fab fa-x-twitter"></i></a>
+                  <li><a class="cs_fs_22" href="https://www.facebook.com/p/Basma-Professional-Management-Development-Training-100093049615468/"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-around">
                 <div>
-                  <h5>Quick Links</h5>
-                  <hr>
+                  <h5 class="footer-heading">Quick Links</h5>
                   <ul class="list-unstyled">
                     <li><i class="fa-solid fa-play"></i><a href="#home"> الرئيسية </a></li>
                     <li><i class="fa-solid fa-play"></i><a href="#about"> من نحن </a></li>
@@ -735,8 +740,7 @@
                   </ul>
                 </div>
                 <div>
-                  <h5> سياساتنا </h5>
-                  <hr style="width: 4rem;">
+                  <h5 class="footer-heading"> سياساتنا </h5>
                   <ul class="list-unstyled">
                     <li><i class="fa-solid fa-play"></i><a href="terms.html"> شروط الخدمة </a></li>
                     <li><i class="fa-solid fa-play"></i><a href="privacy.html"> سياسة الخصوصية </a></li>
@@ -746,8 +750,7 @@
 
               <!-- Right Section: Newsletter -->
               <div class="col-lg-3 col-md-12">
-                <h5> النشرة الإخبارية </h5>
-                <hr style="width: 6rem;">
+                <h5  class="footer-heading"> النشرة الإخبارية </h5>
                 <p  class="mb-5"> اشترك في نشرتنا الإخبارية لتصلك آخر التحديثات والأخبار </p>
                 <form action="#" class="d-flex flex-column mb-3">
                   <input type="email" class="form-control mb-2" placeholder="Your Email" required style="background-color: #D9D9D9;" dir="ltr">
