@@ -127,7 +127,7 @@ body {
   }
   .icons {
     display: flex;
-    /* gap: 8px; */
+    gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
   }
